@@ -1,30 +1,27 @@
 # Házi feladat specifikáció
 
-Információk [itt](https://viauac00.github.io/laborok/hf)
-
 ## Mobil- és webes szoftverek
-### [Dátum]
-### [Alkalmazás neve]
-### [Teljes név] - ([Neptun kód])
-### [e-mail cím] 
-### Laborvezető: [Laborvezető neve]
+### 2022.10.22.
+### Spendings
+### Rónai Lili Mirjam - (WAQO6I)
+### lili.ronai123@gmail.com
+### Laborvezető: Barsi Márk
 
 ## Bemutatás
 
-Az alkalmazás rövid, 2-3 mondatos bemutatása. Honnan az ötlet, mi szülte az igényt, ki lehetne a célközönség.
-A laboron és előadáson bemutatott alkalmazásokat nem lehet házi feladatnak választani.
+Az alkalmazás célja a mindennapi kiadások nyomonkövetésének segítése. Excel táblázatokba szoktam felvinni a költségeimet, de amikor elutazok valahova a laptopom nélkül, akkor gyakran elmarad a a különböző vásárlásaim felírása, és legtöbbször a blokkokat is elhagyom. Ellenben a telefonom mindig nálam van, és előfordul, hogy fizetésre is használom. Így egy mobilalkalmazás segítene, hogy konzisztensebben kövessem a kiadásaimat.
 
 ## Főbb funkciók
 
-Az alkalmazás minden funkciójára kiterjedő leírás (röviden, lényegre törően). Legyen egyértelműen eldönthető, hogy az adott funkció implementálva van-e!
-Pl.: Az alkalmazással lehetőség van tételek felvételére és tárolására, valamint azok rendezett megjelenítésére, illetve frissítésre X hálózati hívás segítségével.
+- költség felvétele különböző kategóriákba (pl.: élelmiszer, bulizás, stb.)
+- költések megjelenítése tételesen kategórák szerint
+- bevételek felvétele
+- bevételek megjelenítése
+- költségek megjelenítése felvétel időrendje szerint
 
 ## Választott technológiák:
 
-- (UI)
-- (fragmentek)
-- (RecyclerView)
-- (Perzisztens adattárolás)
-
-
-# Házi feladat dokumentáció (ha nincs, ez a fejezet törölhető)
+- UI
+- fragmentek
+- RecyclerView
+- Perzisztens adattárolás
