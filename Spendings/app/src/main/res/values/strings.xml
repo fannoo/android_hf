@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Spendings</string>
+    <string name="p1">p1</string>
+    <string name="home">home</string>
+    <string name="p2">p2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="expense">expense</string>
+    <string name="income">income</string>
+    <string name="add">add</string>
+    <string name="amount_string">amount</string>
+    <string name="hello">hello</string>
+    <string name="name_string">name</string>
+    <string name="date_string">date</string>
+    <string name="cancel">cancel</string>
+</resources>
