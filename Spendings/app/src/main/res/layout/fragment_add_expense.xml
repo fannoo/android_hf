@@ -53,13 +53,23 @@
         style="?attr/materialButtonOutlinedStyle"
         />
 
-    <TextView
-        android:id="@+id/date_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/expense_date"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expense_category"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="@string/category_string"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expense_date"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/expense_add_button"
@@ -83,7 +93,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp"
         />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

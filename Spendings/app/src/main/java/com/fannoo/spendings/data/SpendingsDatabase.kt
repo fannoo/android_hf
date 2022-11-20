@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [ExpenseItem::class], version = 1)
+@Database(entities = [ExpenseItem::class], version = 2)
 abstract class SpendingsDatabase : RoomDatabase() {
     abstract fun expenseItemDao() : ExpenseItemDao
 
@@ -23,7 +23,8 @@ abstract class SpendingsDatabase : RoomDatabase() {
                     applicationContext,
                     SpendingsDatabase::class.java,
                     "spendings"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                 .build()
                 INSTANCE = instance
                 return instance
             }

@@ -11,26 +11,28 @@ import com.fannoo.spendings.databinding.FragmentAddExpenseBinding
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.concurrent.thread
 
-class AddExpenseFragment : Fragment() {
+class AddExpenseFragment(private val spendType : ExpenseItem.spendingType) : Fragment() {
 
     private lateinit var binding: FragmentAddExpenseBinding
-    private lateinit var listener : newExpenseListener
     private var dateget : Long? = MaterialDatePicker.todayInUtcMilliseconds()
-    private val format = SimpleDateFormat("yy.MM.dd")
+    private val format = SimpleDateFormat("yyyy.MM.dd", Locale.FRANCE)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentAddExpenseBinding.inflate(inflater, container, false)
-        listener = requireParentFragment() as newExpenseListener
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.expenseAddButton.setOnClickListener {
-            if(isValid())
+            if(isValid()) {
                 addNewItem(getExepenseItem())
+                requireActivity().onBackPressed()
+            }
             else
                 Snackbar.make(requireContext(), view, "tolts ki minden adatot kerlek", Snackbar.LENGTH_SHORT)
                     .setAnchorView(binding.expenseAddButton)
@@ -38,15 +40,16 @@ class AddExpenseFragment : Fragment() {
         }
 
         binding.expenseCancelButton.setOnClickListener {
-
+            requireActivity().onBackPressed()
         }
 
+        binding.expenseDate.text = format.format(MaterialDatePicker.todayInUtcMilliseconds())
         val picker = MaterialDatePicker.Builder.datePicker()
             .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
             .build()
         picker.addOnPositiveButtonClickListener {
             dateget = picker.selection
-            binding.dateText.text = format.format(dateget)
+            binding.expenseDate.text = format.format(dateget)
         }
 
         binding.expenseDate.setOnClickListener {
@@ -62,11 +65,11 @@ class AddExpenseFragment : Fragment() {
 
     private fun getExepenseItem() : ExpenseItem {
         return ExpenseItem(
-            type = ExpenseItem.spendingType.EXPENSE,
+            type = spendType,
             name = binding.expenseName.editText?.text.toString(),
             amount = binding.expenseAmount.editText?.text.toString().toInt(),
             date = format.format(dateget),
-            category = "elelmiszer"
+            category = binding.expenseCategory.editText?.text!!.toString()
         )
     }
 
@@ -76,10 +79,6 @@ class AddExpenseFragment : Fragment() {
             newItem.id = insertID
         }
 
-    }
-
-    interface newExpenseListener {
-        fun onExpenseItemCreated(newItem : ExpenseItem)
     }
 
 }

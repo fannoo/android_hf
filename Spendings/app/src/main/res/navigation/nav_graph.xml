@@ -8,9 +8,6 @@
         android:id="@+id/addFragment"
         android:name="com.fannoo.spendings.fragments.AddFragment"
         android:label="AddFragment" >
-        <action
-            android:id="@+id/action_addFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -22,5 +19,44 @@
         <argument
             android:name="sender"
             app:argType="reference" />
+        <action
+            android:id="@+id/action_mainFragment_to_pieFragment"
+            app:destination="@id/pieFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_barFragment"
+            app:destination="@id/barFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.fannoo.spendings.fragments.AddExpenseFragment"
+        android:label="fragment_add_expense"
+        tools:layout="@layout/fragment_add_expense" >
+        <action
+            android:id="@+id/action_addExpenseFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pieFragment"
+        android:name="com.fannoo.spendings.fragments.PieFragment"
+        android:label="fragment_pie"
+        tools:layout="@layout/fragment_pie" >
+        <action
+            android:id="@+id/action_pieFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_pieFragment_to_barFragment"
+            app:destination="@id/barFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barFragment"
+        android:name="com.fannoo.spendings.fragments.BarFragment"
+        android:label="fragment_bar"
+        tools:layout="@layout/fragment_bar" >
+        <action
+            android:id="@+id/action_barFragment_to_pieFragment"
+            app:destination="@id/pieFragment" />
+        <action
+            android:id="@+id/action_barFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
