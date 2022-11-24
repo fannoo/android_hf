@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Spendings</string>
+    <string name="p1">month</string>
+    <string name="home">home</string>
+    <string name="p2">year</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="expense">expense</string>
+    <string name="income">income</string>
+    <string name="add">add</string>
+    <string name="amount_string">amount</string>
+    <string name="hello">hello</string>
+    <string name="name_string">name</string>
+    <string name="date_string">date</string>
+    <string name="cancel">cancel</string>
+    <string name="category_string">category</string>
+    <string name="from_string">from</string>
+    <string name="source_string">source</string>
+    <string name="pie_spend">Spendings in current month</string>
+    <string name="add_expense">add expense or income</string>
+</resources>
