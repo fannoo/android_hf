@@ -10,7 +10,7 @@ import com.fannoo.spendings.data.SpendingsDatabase
 import com.fannoo.spendings.databinding.ItemSpendingListBinding
 import kotlin.concurrent.thread
 
-class MainAdapter(val context: Context) : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
+class MainRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MainRecyclerViewAdapter.MainViewHolder>() {
 
     private val items = mutableListOf<ExpenseItem>()
 

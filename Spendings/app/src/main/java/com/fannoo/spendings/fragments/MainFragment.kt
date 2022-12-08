@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fannoo.spendings.R
-import com.fannoo.spendings.adapter.MainAdapter
+import com.fannoo.spendings.adapter.MainRecyclerViewAdapter
 import com.fannoo.spendings.data.SpendingsDatabase
 import com.fannoo.spendings.databinding.FragmentMainBinding
 import kotlin.concurrent.thread
@@ -18,7 +18,7 @@ class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
     private lateinit var database: SpendingsDatabase
-    private lateinit var adapter: MainAdapter
+    private lateinit var adapter: MainRecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +58,7 @@ class MainFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        adapter = MainAdapter(requireContext())
+        adapter = MainRecyclerViewAdapter(requireContext())
         binding.mainRecycleView.layoutManager = LinearLayoutManager(requireContext())
         binding.mainRecycleView.adapter = adapter
         loadItems()
