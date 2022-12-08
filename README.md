@@ -21,7 +21,7 @@ Az alkalmazás célja a mindennapi kiadások nyomonkövetésének segítése. Ex
 
 ## Választott technológiák:
 
-- UI
 - fragmentek
 - RecyclerView
 - Perzisztens adattárolás
+- MPAndroidChart
