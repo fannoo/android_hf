@@ -14,10 +14,9 @@ Az alkalmazás célja a mindennapi kiadások nyomonkövetésének segítése. Ex
 ## Főbb funkciók
 
 - költség felvétele különböző kategóriákba (pl.: élelmiszer, bulizás, stb.)
-- költések megjelenítése tételesen kategórák szerint
-- bevételek felvétele
-- bevételek megjelenítése
-- költségek megjelenítése felvétel időrendje szerint
+- bevételek felvétele és megjelenítése
+- költségek felvétele és megjelítése
+- diagrammok megjelenítése
 
 ## Választott technológiák:
 
